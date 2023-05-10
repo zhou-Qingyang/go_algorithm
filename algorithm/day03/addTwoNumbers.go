@@ -5,6 +5,7 @@ type ListNode struct {
 	Next *ListNode
 }
 
+//02
 func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
 	head := &ListNode{}
 	cur := head
@@ -20,7 +21,8 @@ func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
 			l2 = &ListNode{}
 		}
 		sum = l1.Val + l2.Val + carry
-		carry = sum % 10
+		carry = sum / 10
+		sum = sum % 10
 
 		cur.Next = &ListNode{Val: sum}
 		cur = cur.Next
@@ -33,5 +35,5 @@ func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
 	if carry > 0 {
 		cur.Next = &ListNode{Val: carry}
 	}
-	return cur.Next
+	return head.Next
 }
