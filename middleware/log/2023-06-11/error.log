@@ -1,0 +1,3 @@
+[github.com/zhou-Qingzhang/go-middleware]2023/06/11 - 00:01:29.355	[31merror[0m	C:/Users/15202/Desktop/self-demo/go_study/middleware/main.go:33	3. create directory	{" error:Error": "json: unsupported type: func() time.Time"}
+[github.com/zhou-Qingzhang/go-middleware]2023/06/11 - 00:02:56.237	[31merror[0m	C:/Users/15202/Desktop/self-demo/go_study/middleware/main.go:33	3. create directory	{" error:Error": "json: unsupported type: func() time.Time"}
+[github.com/zhou-Qingzhang/go-middleware]2023/06/11 - 00:05:53.541	[31merror[0m	C:/Users/15202/Desktop/self-demo/go_study/middleware/main.go:34	3. create directory	{"error:Error": "json: unsupported type: func() time.Time"}

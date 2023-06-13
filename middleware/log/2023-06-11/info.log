@@ -1,0 +1,9 @@
+[github.com/zhou-Qingzhang/go-middleware]2023/06/11 - 00:01:29.291	[34minfo[0m	C:/Users/15202/Desktop/self-demo/go_study/middleware/initalize/gorm_mysql.go:24	数据库初始化成功!
+[github.com/zhou-Qingzhang/go-middleware]2023/06/11 - 00:01:29.352	[34minfo[0m	C:/Users/15202/Desktop/self-demo/go_study/middleware/main.go:30	1.查询数据成功
+[github.com/zhou-Qingzhang/go-middleware]2023/06/11 - 00:01:29.353	[34minfo[0m	C:/Users/15202/Desktop/self-demo/go_study/middleware/main.go:32	2. User logged in.	{"username": "john", "metadata": {"email":"john@example.com"}}
+[github.com/zhou-Qingzhang/go-middleware]2023/06/11 - 00:02:56.183	[34minfo[0m	C:/Users/15202/Desktop/self-demo/go_study/middleware/initalize/gorm_mysql.go:24	数据库初始化成功!
+[github.com/zhou-Qingzhang/go-middleware]2023/06/11 - 00:02:56.235	[34minfo[0m	C:/Users/15202/Desktop/self-demo/go_study/middleware/main.go:30	1.查询数据成功
+[github.com/zhou-Qingzhang/go-middleware]2023/06/11 - 00:02:56.236	[34minfo[0m	C:/Users/15202/Desktop/self-demo/go_study/middleware/main.go:32	2. User logged in.	{"username": "john", "metadata": {"email":"john@example.com"}}
+[github.com/zhou-Qingzhang/go-middleware]2023/06/11 - 00:05:53.479	[34minfo[0m	C:/Users/15202/Desktop/self-demo/go_study/middleware/initalize/gorm_mysql.go:24	数据库初始化成功!
+[github.com/zhou-Qingzhang/go-middleware]2023/06/11 - 00:05:53.538	[34minfo[0m	C:/Users/15202/Desktop/self-demo/go_study/middleware/main.go:30	1.查询数据成功
+[github.com/zhou-Qingzhang/go-middleware]2023/06/11 - 00:05:53.539	[34minfo[0m	C:/Users/15202/Desktop/self-demo/go_study/middleware/main.go:33	2. User logged in.	{"username": "john", "metadata": {"email":"john@example.com"}}
