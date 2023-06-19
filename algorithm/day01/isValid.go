@@ -1,6 +1,6 @@
 package day01
 
-//20
+//20.有效的括号
 func IsValid(s string) bool {
 	stack := []byte{} // 定义一个栈
 	for i := 0; i < len(s); i++ {

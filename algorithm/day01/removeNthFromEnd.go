@@ -5,7 +5,7 @@ type ListNode struct {
 	Next *ListNode
 }
 
-//19
+//19 删除链表的倒数第 N 个结点
 func RemoveNthFromEnd(head *ListNode, n int) *ListNode {
 	dummy := &ListNode{0, head}
 	p, q := dummy, dummy

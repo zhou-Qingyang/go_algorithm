@@ -1,6 +1,6 @@
 package day02
 
-//21
+//21 合并两个有序链表
 func MergeTwoLists(l1 *ListNode, l2 *ListNode) *ListNode {
 	dummy := &ListNode{}
 	cur := dummy

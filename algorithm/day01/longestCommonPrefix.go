@@ -1,6 +1,6 @@
 package day01
 
-//14
+//14. 最长公共前缀
 func LongestCommonPrefix(strs []string) string {
 
 	if len(strs) == 0 {

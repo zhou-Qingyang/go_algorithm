@@ -1,6 +1,6 @@
 package day02
 
-//31
+//31 下一个排列
 func NextPermutation(nums []int) {
 	n := len(nums)
 	i, j := n-2, n-1

@@ -1,6 +1,6 @@
 package day01
 
-//1
+//1. 两数之和
 func TwoSum(nums []int, target int) []int {
 	m := make(map[int]int)
 	for i, v := range nums {

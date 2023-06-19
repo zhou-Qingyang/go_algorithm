@@ -2,7 +2,7 @@ package day01
 
 import "sort"
 
-//15
+//15.三数之和
 func TreeSum(nums []int) [][]int {
 	result := [][]int{}
 	sort.Ints(nums)

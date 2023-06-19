@@ -5,7 +5,7 @@ import (
 	"sort"
 )
 
-//16
+//16.最接近的三数之和
 func ThreeSumClosest(nums []int, target int) int {
 	sort.Ints(nums)
 	diff := math.MaxInt32 // 最接近的差值
