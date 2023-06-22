@@ -14,3 +14,7 @@ zap:
   encode-level: LowercaseColorLevelEncoder
   stacktrace-key: stacktrace
   log-in-console: true
+rocket-mq:
+  server: 111.230.60.15
+  port: 9876
+  

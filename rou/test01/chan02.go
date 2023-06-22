@@ -4,47 +4,33 @@ import "fmt"
 
 // 打印 1 的函数
 func printOne(c1, c3 chan int, done chan bool) {
-	for i := 0; i < 100; i++ {
-		<-c3
-		fmt.Println(1)
-
+	for i := 0; i < 15; i++ {
+		<-c3 // 阻塞当前状态
+		fmt.Printf("第一个协程:1\n")
 		// 在通道已满时跳过写操作
-		select {
-		case c1 <- 1:
-		default:
-		}
+		c1 <- 1
 	}
 	done <- true
 }
 
 // 打印 2 的函数
-func printTwo(c1, c2 chan int, done chan bool) {
-	for i := 0; i < 100; i++ {
+func printTwo(c1, c2 chan int) {
+	for i := 0; i < 15; i++ {
 		<-c1
-		fmt.Println(2)
-
+		fmt.Printf("第二个协程:2\n")
 		// 在通道已满时跳过写操作
-		select {
-		case c2 <- 1:
-		default:
-		}
+		c2 <- 1
 	}
-	done <- true
+
 }
 
 // 打印 3 的函数
-func printThree(c2, c3 chan int, done chan bool) {
-	for i := 0; i < 100; i++ {
+func printThree(c2, c3 chan int) {
+	for i := 0; i < 15; i++ {
 		<-c2
-		fmt.Println(3)
-
-		// 在通道已满时跳过写操作
-		select {
-		case c3 <- 1:
-		default:
-		}
+		fmt.Printf("第三个协程:3\n")
+		c3 <- 1
 	}
-	done <- true
 }
 
 func PrintNum3() {
@@ -52,38 +38,17 @@ func PrintNum3() {
 	c2 := make(chan int, 1) // 将 c2 初始化为带缓冲的通道，避免协程死锁
 	c3 := make(chan int, 1) // 将 c3 初始化为带缓冲的通道，避免协程死锁
 
-	// 用于标识协程是否已经完成工作
 	done1 := make(chan bool)
-	done2 := make(chan bool)
-	done3 := make(chan bool)
 
-	// 初始化 c3
-	go func() {
-		c3 <- 1
-	}()
+	// 初始化 开启线程
+	c3 <- 1
+	go printOne(c1, c3, done1)
+	go printTwo(c1, c2)
+	go printThree(c2, c3)
 
-	// 启动协程
-	for i := 0; i < 100; i++ {
-		go printOne(c1, c3, done1)
-		go printTwo(c1, c2, done2)
-		go printThree(c2, c3, done3)
-	}
+	<-done1 // 这里要先执行
+	// 因为子协程更慢
+	// 而且 done1这个 是无缓冲的
+	// 所以 数据发送前 必须先是接收
 
-	// 等待所有协程完成工作
-	for i := 0; i < 300; i++ {
-		select {
-		case <-done1:
-			if i == 299 {
-				close(c1)
-			}
-		case <-done2:
-			if i == 299 {
-				close(c2)
-			}
-		case <-done3:
-			if i == 299 {
-				close(c3)
-			}
-		}
-	}
 }
