@@ -2,6 +2,10 @@ package test01
 
 import "fmt"
 
+func init() {
+	fmt.Println("test01 测试执行了")
+}
+
 // 打印 1 的函数
 func printOne(c1, c3 chan int, done chan bool) {
 	for i := 0; i < 15; i++ {
